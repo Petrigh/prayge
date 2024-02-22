@@ -3,16 +3,15 @@
     <div>
       <template [ngTemplateOutlet]="structFaceTemplate"></template>
       <template [ngTemplateOutlet]="structHairTemplate"></template>
-      <template [ngTemplateOutlet]="structHairTemplate" [ngTemplateOutletContext]="{ angle: '30deg', left: '-26', top: '-105' }"></template>
-      <template [ngTemplateOutlet]="structHairTemplate" [ngTemplateOutletContext]="{ angle: '45deg', left: '-35', top: '-220' }"></template>
-      <template [ngTemplateOutlet]="structHairTemplate" [ngTemplateOutletContext]="{ angle: '70deg', left: '-43', top: '-338' }"></template>
-      <template [ngTemplateOutlet]="structFlippedHairTemplate" [ngTemplateOutletContext]="{ angle: '0deg', left: '1', top: '-398' }"></template>
-      <template [ngTemplateOutlet]="structFlippedHairTemplate" [ngTemplateOutletContext]="{ angle: '-15deg', left: '15', top: '-505' }"></template>
-      <template [ngTemplateOutlet]="structFlippedHairTemplate" [ngTemplateOutletContext]="{ angle: '-30deg', left: '25', top: '-615' }"></template>
-      <template [ngTemplateOutlet]="structFlippedHairTemplate" [ngTemplateOutletContext]="{ angle: '-60deg', left: '40', top: '-730' }"></template>
+      <template [ngTemplateOutlet]="structHairTemplate" [ngTemplateOutletContext]="{ angle: '30deg', left: '-20', top: '-115' }"></template>
+      <template [ngTemplateOutlet]="structHairTemplate" [ngTemplateOutletContext]="{ angle: '45deg', left: '-25', top: '-250' }"></template>
+      <template [ngTemplateOutlet]="structHairTemplate" [ngTemplateOutletContext]="{ angle: '70deg', left: '-30', top: '-370' }"></template>
+      <template [ngTemplateOutlet]="structFlippedHairTemplate" [ngTemplateOutletContext]="{ angle: '0deg', left: '50', top: '-398' }"></template>
+      <template [ngTemplateOutlet]="structFlippedHairTemplate" [ngTemplateOutletContext]="{ angle: '-15deg', left: '60', top: '-515' }"></template>
+      <template [ngTemplateOutlet]="structFlippedHairTemplate" [ngTemplateOutletContext]="{ angle: '-45deg', left: '80', top: '-635' }"></template>
+      <template [ngTemplateOutlet]="structFlippedHairTemplate" [ngTemplateOutletContext]="{ angle: '-60deg', left: '75', top: '-765' }"></template>
     </div>
-
-    </div>
+  </div>
 </div>
   
 <ng-template #structHairTemplate let-angle="angle" let-left="left" let-top="top">

@@ -1,42 +1,49 @@
 import { Injectable } from '@angular/core';
-import { God } from '../models/god';
+import { God, Sphere } from '../models/god';
+import { filter } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RandomGodsService {
 
-  private prefixes = ["Omni", "Zephyr", "Aurora", "Eterna"];
-  private suffixes = ["sia", "thor", "nix", "us"];
-  private domains = ["War", "Love", "Nature", "Death"];
-  private appearances = ["ethereal", "monstrous", "celestial", "elemental"];
-  private personalities = ["benevolent", "wrathful", "enigmatic", "compassionate"];
-  private symbols = ["sword", "rose", "tree", "skull"];
-  private worshipers = ["humans", "elves", "dwarves", "monsters"];
-  private realms = ["heavenly realm", "underworld", "natural sanctuary", "celestial plane"];
-  private avatars = ["copperface"];
+  private spheres: Sphere[] = [
+    {name: "Nature",
+    favorites: ["Fishes","Plants"],
+    thoughts: "Can't speak, they growl, buzz, click and generally make a varied racket"},
+    {name: "Agriculture",
+    favorites: ["Food","Fertility","Rain"],
+    thoughts: "Constantly looksto the sky for rain"},
+    {name: "Art",
+    favorites: ["Dances","Music","Paintings","Poetry","Songs"],
+    thoughts: "It is decorated with intricate patterns"},
+    {name: "Boundries",
+    favorites: ["The Coast"],
+    thoughts: "The pieces of its body are carefully separated by markings"},
+    {name: "Chaos",
+    favorites: ["War", "Gambling"],
+    thoughts: "It spins wildly, lurching and howling"},
+    {name: "Copper",
+    favorites: ["Electricity", "Economics", "Weapons", "Medicine"],
+    thoughts: "Its skin oxidices when they cry"}
+  ]
+  private gods = [
+    {name: "Copperface",
+    domain: "Copper",
+    worshipers: "Dwarves",
+    avatar: "copperface"
+    }
+  ];
 
   constructor() {}
 
   generateRandomGod(): God {
-    const name = this.getRandomName();
-    const domain = this.getRandomItem(this.domains);
-    const appearance = this.getRandomItem(this.appearances);
-    const personality = this.getRandomItem(this.personalities);
-    const symbol = this.getRandomItem(this.symbols);
-    const worshipers = this.getRandomItem(this.worshipers);
-    const realm = this.getRandomItem(this.realms);
-    const avatar = this.getRandomItem(this.avatars);
-    return new God(name, domain, appearance, personality, symbol, worshipers, realm, avatar);
+    const god = this.getRandomItem(this.gods);
+    const sphere = this.spheres.filter((sphere) => sphere.name == god.domain);
+    return new God(god.name, god.domain, sphere[0], god.worshipers, god.avatar);
   }
 
-  private getRandomName(): string {
-    const prefix = this.getRandomItem(this.prefixes);
-    const suffix = this.getRandomItem(this.suffixes);
-    return prefix + suffix;
-  }
-
-  private getRandomItem(array: string[]): string {
+  private getRandomItem(array: any[]): any {
     const randomIndex = Math.floor(Math.random() * array.length);
     return array[randomIndex];
   }

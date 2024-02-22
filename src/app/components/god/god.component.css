@@ -1,22 +1,33 @@
+
 .god-card {
-    width: 350px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    padding: 25px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .god-details {
-    flex-grow: 1;
-    margin-left: 50px;
-  }
-  
-  .god-name {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .god-description {
-    font-size: 16px;
-  }
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.god-details {
+  margin: 0px 0px 5px 30px;
+  width: 300px;
+}
+
+.god-details h2 {
+  font-size: 20px;
+}
+
+.god-description {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 150px;
+}
+
+.god-description h5 {
+  font-size: 16px;
+}
+
+.god-description p {
+  font-size: 12px;
+}

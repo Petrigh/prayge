@@ -1,13 +1,13 @@
 .background{
-  width: 150px;
-  height: 100px;
+  width: 400px;
+  height: 300px;
   display: flex;
   justify-content: center;
 }
 
 /* copperface */
 .copperface .background{
-  background-color: #c3c3c3;
+  background-color: #b1cdda;
 }
 
 .copperface .hair{
@@ -23,71 +23,69 @@
 .copperface .poly4
 {
   position: relative;
-  left: 15%;
-  bottom: 2%;
+  left: -40%;
 }
 
 .copperface .poly1{
-  clip-path: polygon(50% 0%, 55% 65%, 0% 5%);
-  background-color: #2218ad;
-  width: 30px;
-  height: 25px;
+  clip-path: polygon(50% 0%, 85% 65%, 0% 10%);
+  background-color: #5218FA;
+  width: 80px;
+  height: 70px;
 }
 .copperface .poly2{
-  clip-path: polygon(45% 0%, 85% 49%, 10% 75%);
-  background-color: #473be9;
-  width: 29px;
-  height: 22px;
-  left: 2%;
-  top: -26px;
+  clip-path: polygon(45% 0%, 85% 27%, 10% 75%);
+  background-color: #0190EE;
+  width: 80px;
+  height: 70px;
+  bottom: 63%;
+  left: -75%;
 }
 
 .copperface .poly3{
-  clip-path: polygon(10% 10%, 100% 0%, 10% 75%);
-  background-color: #3b5be9;
-  width: 10px;
-  height: 22px;
-  bottom: 34%;
-  left: 4%;
+  clip-path: polygon(10% 30%, 100% 0%, 10% 100%);
+  background-color: #446CCF;
+  width: 30px;
+  height: 50px;
+  bottom: 96%;
+  left: -69%;
 }
 
 .copperface .poly4{
   border-radius: 50%;
-  background-color: #b87333;
-  width: 10px;
-  height: 10px;
-  bottom: 40%;
-  left: 1%;
+  background-color: #CE7C56;
+  width: 20px;
+  height: 20px;
+  bottom: 96%;
+  left: -75%;
 }
 
 .copperface .head{
   position: relative;
-  top: 25%;
-  left: 26%;
+  top: 20%;
   border-radius: 50%;
-  background-color: #b87333;
-  width: 50px;
-  height: 50px;
+  background-color: #cc8d67;
+  width: 150px;
+  height: 150px;
   z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: rotateAnimation 20s linear infinite;
+  animation: rotateAnimation 60s linear infinite;
 }
 
 .copperface .face{
   border-radius: 50%;
-  border: solid 1.5px #000000;
-  background-color: #e09248c2;
-  width: 40px;
-  height: 40px;
+  border: solid 3px #71d4cc ;
+  background-color: #CE7C56;
+  width: 130px;
+  height: 130px;
   z-index: 1;
 }
 .copperface .eye1{
   clip-path: polygon(0% 0%, 10% 0%, 10% 55%, 40% 55%, 40% 35%, 20% 35%, 20% 25%, 50% 25%, 50% 65%, 0% 65%);
-  background-color: #000000;
-  width: 20px;
-  height: 20px;
+  background-color: #71d4cc ;
+  width: 65px;
+  height: 65px;
   position: relative;
   left: 40%;
   z-index: 1;
@@ -95,9 +93,9 @@
 .copperface .eye2{
   clip-path: polygon(0% 0%, 10% 0%, 10% 55%, 40% 55%, 40% 35%, 20% 35%, 20% 25%, 50% 25%, 50% 65%, 0% 65%);
   transform: rotate(-135deg);
-  background-color: #000000;
-  width: 20px;
-  height: 20px;
+  background-color: #71d4cc ;
+  width: 65px;
+  height: 65px;
   position: relative;
   right: 7%;
   bottom: 20%;
@@ -105,10 +103,10 @@
 }
 .copperface .mouth{
   clip-path: polygon(0% 0%, 10% 0%, 10% 55%, 40% 55%, 40% 35%, 20% 35%, 20% 25%, 50% 25%, 50% 65%, 0% 65%);
-  background-color: #000000;
+  background-color: #71d4cc ;
   transform: rotate(+135deg);
-  width: 20px;
-  height: 20px;
+  width: 65px;
+  height: 65px;
   position: relative;
   left: 40%;
   bottom: 55%;
