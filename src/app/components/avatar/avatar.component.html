@@ -1,15 +1,52 @@
 <div [class]="avatar">
   <div class="background">
-    <div class="face">
-      <div class="eye left-eye"></div>
-      <div class="eye right-eye"></div>
-      <div class="mouth"></div>
+    <div>
+      <template [ngTemplateOutlet]="structFaceTemplate"></template>
+      <template [ngTemplateOutlet]="structHairTemplate"></template>
+      <template [ngTemplateOutlet]="structHairTemplate" [ngTemplateOutletContext]="{ angle: '30deg', left: '-26', top: '-105' }"></template>
+      <template [ngTemplateOutlet]="structHairTemplate" [ngTemplateOutletContext]="{ angle: '45deg', left: '-35', top: '-220' }"></template>
+      <template [ngTemplateOutlet]="structHairTemplate" [ngTemplateOutletContext]="{ angle: '70deg', left: '-43', top: '-338' }"></template>
+      <template [ngTemplateOutlet]="structFlippedHairTemplate" [ngTemplateOutletContext]="{ angle: '0deg', left: '1', top: '-398' }"></template>
+      <template [ngTemplateOutlet]="structFlippedHairTemplate" [ngTemplateOutletContext]="{ angle: '-15deg', left: '15', top: '-505' }"></template>
+      <template [ngTemplateOutlet]="structFlippedHairTemplate" [ngTemplateOutletContext]="{ angle: '-30deg', left: '25', top: '-615' }"></template>
+      <template [ngTemplateOutlet]="structFlippedHairTemplate" [ngTemplateOutletContext]="{ angle: '-60deg', left: '40', top: '-730' }"></template>
     </div>
+
+    </div>
+</div>
+  
+<ng-template #structHairTemplate let-angle="angle" let-left="left" let-top="top">
+  <div class="hair" 
+  [style.transform]="'rotate(' + angle + ')'" 
+  [style.left]="left + 'px'"
+  [style.top]="top + 'px'"
+  >
     <div class="poly1"></div>
     <div class="poly2"></div>
     <div class="poly3"></div>
     <div class="poly4"></div>
-    <div class="poly5"></div>
   </div>
-</div>
-  
+</ng-template>
+
+<ng-template #structFlippedHairTemplate let-angle="angle" let-left="left" let-top="top">
+  <div class="hair" 
+  [style.transform]="'rotate(' + angle + ')' + 'scaleX(-1)'" 
+  [style.left]="left + 'px'"
+  [style.top]="top + 'px'"
+  >
+    <div class="poly1"></div>
+    <div class="poly2"></div>
+    <div class="poly3"></div>
+    <div class="poly4"></div>
+  </div>
+</ng-template>
+
+<ng-template #structFaceTemplate>
+  <div class="head">
+    <div class="face">
+      <div class="eye1"></div>
+      <div class="eye2"></div>
+      <div class="mouth"></div>
+    </div>
+  </div>
+</ng-template>

@@ -14,7 +14,7 @@ export class RandomGodsService {
   private symbols = ["sword", "rose", "tree", "skull"];
   private worshipers = ["humans", "elves", "dwarves", "monsters"];
   private realms = ["heavenly realm", "underworld", "natural sanctuary", "celestial plane"];
-  private avatars = ["copperface", "xenon"];
+  private avatars = ["copperface"];
 
   constructor() {}
 

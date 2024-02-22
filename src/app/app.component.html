@@ -1,7 +1,9 @@
-<div>
+
+<div class="header">
+  <img class="pray-img" src="../assets/images/pray.jpg">
   <button class="pray" (click)="generateGod()">Pray</button>
 </div>
 
-<div *ngIf="god">
+<div *ngIf="god" class="body">
   <app-god [god]="god"></app-god>
 </div>
