@@ -14,6 +14,7 @@ export class RandomGodsService {
   private symbols = ["sword", "rose", "tree", "skull"];
   private worshipers = ["humans", "elves", "dwarves", "monsters"];
   private realms = ["heavenly realm", "underworld", "natural sanctuary", "celestial plane"];
+  private avatars = ["copperface", "xenon"];
 
   constructor() {}
 
@@ -25,7 +26,8 @@ export class RandomGodsService {
     const symbol = this.getRandomItem(this.symbols);
     const worshipers = this.getRandomItem(this.worshipers);
     const realm = this.getRandomItem(this.realms);
-    return new God(name, domain, appearance, personality, symbol, worshipers, realm);
+    const avatar = this.getRandomItem(this.avatars);
+    return new God(name, domain, appearance, personality, symbol, worshipers, realm, avatar);
   }
 
   private getRandomName(): string {

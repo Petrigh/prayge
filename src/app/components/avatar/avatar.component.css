@@ -1,0 +1,45 @@
+.background{
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+/* copperface */
+.copperface .background{
+  background-color: #c3c3c3;
+}
+
+.copperface .poly1{
+  clip-path: polygon(50% 0%, 55% 65%, 0% 5%);
+  background-color: #2218ad;
+  width: 30px;
+  height: 25px;
+  position: relative;
+  left: 15%;
+  bottom: 2%;
+}
+
+.copperface .poly2{
+  clip-path: polygon(50% 0%, 85% 50%, 10% 75%);
+  background-color: #473be9;
+  width: 30px;
+  height: 25px;
+  position: relative;
+  bottom: 26%;
+  left: 2%;
+}
+.copperface .face{
+  position: relative;
+  top: 25%;
+  left: 25%;
+  border-radius: 50%;
+  background-color: #b87333;
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+}
+
+/* xenon */
+.xenon .background{
+  background-color: #c3c3c3;
+}

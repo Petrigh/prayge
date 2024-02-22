@@ -6,6 +6,7 @@ export class God {
       public personality: string,
       public symbol: string,
       public worshipers: string,
-      public realm: string
+      public realm: string,
+      public avatar: string
     ) {}
   }

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { God } from '../../../assets/models/god';
 
 @Component({
@@ -7,7 +7,6 @@ import { God } from '../../../assets/models/god';
   styleUrl: './god.component.css'
 })
 export class GodComponent {
-  @Input()
-  god!: God;
-
+  @Input() god!: God;
+  @Input() newFace!: string;
 }

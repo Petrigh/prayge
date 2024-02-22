@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GodComponent } from './components/god/god.component';
+import { AvatarComponent } from './components/avatar/avatar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GodComponent
+    GodComponent,
+    AvatarComponent
   ],
   imports: [
     BrowserModule,

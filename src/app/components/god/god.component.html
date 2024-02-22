@@ -1,11 +1,15 @@
-<div class="god">
-  <h2>{{ god.name }}</h2>
-  <p><strong>Domain:</strong> {{ god.domain }}</p>
-  <p><strong>Appearance:</strong> {{ god.appearance }}</p>
-  <p><strong>Personality:</strong> {{ god.personality }}</p>
-  <p><strong>Symbol:</strong> {{ god.symbol }}</p>
-  <p><strong>Worshipers:</strong> {{ god.worshipers }}</p>
-  <p><strong>Realm:</strong> {{ god.realm }}</p>
-  <p><strong>Power:</strong> {{ god.power }}</p>
+<div class="god-card">
+  <app-avatar [avatar]="god.avatar"></app-avatar>
+  <div class="god-details">
+    <h2 class="god-name">{{ god.name }}</h2>
+    <div class="god-description">      
+      <p><strong>Domain:</strong> {{ god.domain }}</p>
+      <p><strong>Appearance:</strong> {{ god.appearance }}</p>
+      <p><strong>Personality:</strong> {{ god.personality }}</p>
+      <p><strong>Symbol:</strong> {{ god.symbol }}</p>
+      <p><strong>Worshipers:</strong> {{ god.worshipers }}</p>
+      <p><strong>Realm:</strong> {{ god.realm }}</p>
+    </div>
+  </div>
+
 </div>
-  
