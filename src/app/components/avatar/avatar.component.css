@@ -5,6 +5,11 @@
   justify-content: center;
 }
 
+.row{
+  font-family:cursive;
+  display: flex;
+  justify-content: center;
+}
 /* copperface */
 .copperface .background{
   background-color: #b1cdda;
